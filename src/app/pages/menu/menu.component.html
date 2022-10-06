@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let  fb of fooData">
+      <div class="foodbox">
+        <img src="{{fb.foodImg}}">
+        <h1>{{fb.foodName}}</h1>
+        <p>{{fb.foodDetails}}</p>
+        <p>{{fb.foodPrice | currency:'INR'}}</p>
+        <a class="buybtn" [routerLink]="['/menu', fb.id]">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
